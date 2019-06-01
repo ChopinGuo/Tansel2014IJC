@@ -1,0 +1,21 @@
+x = -10:0.1:10;
+
+sinhx = (exp(x)-exp(-x))/2;
+coshx = (exp(x)+exp(-x))/2;
+tanhx = (exp(x)-exp(-x))./(exp(x)+exp(-x));
+sechx = 2./(exp(x)+exp(-x));
+sechx2x = power(sechx.^2);
+
+figure(1),plot(x,sinhx,'r-'),legend('双曲正弦函数sinh(x)');
+grid on;
+
+figure(2),plot(x,coshx,'g-'),legend('双曲余弦函数cosh(x)');
+grid on;
+
+figure(3),plot(x,tanhx,'b-'),legend('双曲正切函数tanh(x)');
+grid on;
+
+figure(4),plot(x,sechx,'y-'),legend('双曲正割函数tanh(x)');
+hold on
+plot(x,sech2x,'g-'),
+grid on;
